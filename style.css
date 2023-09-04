@@ -1,0 +1,239 @@
+/* Variables */
+:root{
+    --primary_color: rgb(233, 69, 181);
+    --btn_color: rgb(191, 44, 144);
+    --secondary_color: #132D46;
+    --gray_color: #696E79;
+    --white: #FFFFFF;
+    --black: #191E29;
+}
+
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+html{
+    font-size: 62.5%;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* Header */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary_color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+/* Logo */
+
+.logo a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 2.3rem;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.logo img{
+        width: 2.3rem;
+}
+
+/* Menu */
+.menu li{
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px 10px;
+
+}
+.menu a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.menu a::after{
+    content: "";
+    width: 0;
+    height: 2.5px;
+    background-color: var(--primary_color);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width .5s;
+}
+
+.menu a:hover::after , .menu a.active::after{
+    width: 100%;
+}
+/* Sign UP */
+.btn{
+    padding: 1rem 3.5rem;
+    border: none;
+    border-radius: 25px;
+    color: var(--white);
+    background-color: var(--btn_color);
+    font-weight: bold;
+}
+
+a.btn{
+  text-decoration: none;
+}
+
+a.btn:hover{
+    cursor :pointer;
+    box-shadow: -2px -2px 8px var(--btn_color),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+
+
+
+
+/* Home Section */
+
+.home_container{
+    width: 100%;
+    min-height: 67.7rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.home_container img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home_text{
+    padding-left: 10rem;
+}
+
+.home_text span{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.home_text h1{
+    font-size: 5.4rem;
+    font-weight: bolder;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+a.watch_btn{
+    text-decoration: none;
+    background-color: var(--btn_color);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    color: var(--white);
+    border-radius: 1rem;
+}
+
+.home_text a:hover{
+    cursor: pointer;
+    box-shadow: -2px -2px 8px var(--btn_color),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, .3);
+}
+a.play_btn{
+    position: absolute;
+    bottom: 8rem;
+    right: 6rem;
+    border-radius: 50%;
+    background-color: var(--btn_color);
+}
+
+a.play_btn .bx{
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top:2px;
+    left: 2px;
+    color: white;
+
+}
+
+/* Movie Section */
+
+.movie_sec{
+    width: 100%;
+    background-color: black;
+    padding-top: 20px;
+}
+
+.movie_sec_header{
+    max-width: 96.8rem;
+    margin: 0 auto 10px auto;
+    padding-top: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--primary_color);
+    color: var(--white);
+}
+
+.movie_container{
+    max-width: 96rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(190px, 1fr));
+    gap: 15px;
+}
+
+.movie_box .movie_img {
+    width: 100%;
+}
+.movie_box img{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(.8);
+}
+
+.movie_box h2{
+    padding: 0;
+    margin: 0;
+    color: var(--white);
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.movie_box span{
+    color: var(--white);
+}
+
+.movie_box:hover{
+    cursor: pointer;
+
+}
+
+.movie_box img:hover{
+    transform: translateY(-5px);
+    transition: all .5s;
+    filter: brightness(1);
+}
