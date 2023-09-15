@@ -21,10 +21,10 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="./index.html" class="active">Home</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">Coming</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#movie">Movies</a></li>
+                    <li><a href="#coming">Coming</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <a href="./signup.html" class="btn">Sign Up</a>
@@ -35,7 +35,7 @@
 
     <!-- Background Section start -->
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="home_container">
             <!-- <img src="./images/wallpaperflare.com_wallpaper.jpg" alt="Venom"> -->
             <div class="home_text">
@@ -48,7 +48,7 @@
     </section>
 
     <!-- Background Section End -->
-    <section class="movie_sec">
+    <section class="movie_sec" id="movie">
         <h1 class="movie_sec_header">Available Movies</h1>
         <div class="movie_container">
             <div class="movie_box">
@@ -113,7 +113,7 @@
 
     </section>
     <!--MOvie section-->
-    <section class="movie_sec">
+    <section class="movie_sec" id="coming">
         <h1 class="movie_sec_header">Upcoming Movies</h1>
         <div class="movie_container">
             <div class="movie_box">
@@ -146,5 +146,25 @@
             </div>
         </div>
     </section>
+    <!-- Contact Section -->
+    <section class="contact_form" id="contact">
+        <h2>Contact Us With Email</h2>
+        <form action="#">
+            <input type="email" placeholder="Enter Email ...." class="input_email">
+            <input type="submit" value="Send" class="input_send">
+        </form>
+    </section>
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="footer_logo"><a href="./index.html"><img src="./Images/icons8-movie-64.png" alt="">NEO</a></div>
+        <div class="social">
+            <a href="#"><i class='bx bxl-tiktok' ></i></a>
+            <a href=""><i class='bx bxl-meta' ></i></a>
+            <a href=""><i class='bx bxl-instagram'></i></a>
+            <a href=""><i class='bx bxl-facebook' ></i></a>
+            <a href=""><i class='bx bxl-twitter' ></i></a>
+        </div>
+    </footer>
+
 </body>
 </html>
