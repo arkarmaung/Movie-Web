@@ -140,6 +140,8 @@ a.btn:hover{
 
 .home_text{
     padding-left: 10rem;
+    text-shadow: 1px 1px 2px black;
+
 }
 
 .home_text span{
@@ -175,7 +177,7 @@ a.watch_btn{
 a.play_btn{
     position: absolute;
     top: 58rem;
-    right: 6rem;
+    right: 5rem;
     border-radius: 50%;
     border: 4px solid rgb(2,3,7,0.4);
     background-color: var(--btn_color);
@@ -203,11 +205,12 @@ a.play_btn .bx{
 .movie_sec{
     width: 100%;
     background-color: black;
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .movie_sec_header{
-    max-width: 96.8rem;
+    max-width: 120rem;
     margin: 0 auto 10px auto;
     padding-top: 10px;
     text-transform: uppercase;
@@ -216,7 +219,7 @@ a.play_btn .bx{
 }
 
 .movie_container{
-    max-width: 96rem;
+    max-width: 120rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(190px, 1fr));
@@ -260,7 +263,7 @@ a.play_btn .bx{
 
 /* Contact Form */
 .contact_form{
-    width: 40rem;
+    width: 50rem;
     margin: 2rem auto;
     text-align: center;
 }
@@ -306,7 +309,7 @@ input[type="email"]:focus{
 /* Footer */
 .footer{
     margin: 0 auto;
-    max-width: 96.8rem;
+    max-width: 120rem;
     min-height: 6rem;
     display: flex;
     justify-content: space-between;
@@ -338,4 +341,102 @@ input[type="email"]:focus{
     filter: brightness(1.4);
     transition: all 400ms ease-in-out;
 
+}
+
+
+/* Responsive */
+
+/* 1680 px */
+
+@media screen and (max-width: 1680px){
+    .movie_sec{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .footer{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* 1080 px */
+@media screen and (max-width: 1080px){
+    .home_text{
+        padding-left: 40px;
+    }
+    .movie_sec_header{
+        max-width: 96.8rem;
+        margin: 0 auto 10px auto;
+        padding-top: 10px;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--primary_color);
+        color: var(--white);
+    }
+    
+    .movie_container{
+        max-width: 96rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(190px, 1fr));
+        gap: 15px;
+    }
+    .contact_form{
+        width: 40rem;
+    }
+
+    .footer{
+        max-width: 96rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu{
+        display: none;
+    }
+    nav{
+        justify-content: space-between;
+        padding: 10px;
+    }
+    a.play_btn{
+        right: 2rem;
+    }
+    .home_text span{
+        font-size: 1.2rem;
+    }
+    .home_text h1{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .contact_form{
+        width: 29rem;
+    }
+    .home_container{
+        width: 100%;
+        min-height: 50rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        color: var(--white);
+        background: url("./Images/wallpaperflare.com_wallpaper.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    a.play_btn{
+        display: none;
+    }
+    .home_text span{
+        font-size: 1rem;
+    }
+    .home_text h1{
+        font-size: 3rem;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .social .bx{
+        font-size: 1.5rem;
+    }
 }
